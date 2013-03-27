@@ -1,8 +1,7 @@
 {
 	"name":"Mr & Mrs",
-	"directory":"mrandmrs",
-	"thumbnail":"/mrandmrs/mrandmrs.jpg",
-	"screenshot":"/mrandmrs/mrandmrs.jpg",
+	"thumbnail":"mrandmrs.jpg",
+	"screenshot":"mrandmrs.jpg",
 	"pageTypes":[],
 	"defaultColorSwatch":"Warmth 2",
 	"defaultFontSwatch":"Lato"
