@@ -444,14 +444,12 @@ hr.line.align-right {
 
 .widget.extendednavigation 
 {
-    float: right;
 }
 
 .widget.extendednavigation ul.align-center li
 {
     text-align: center;
     background-image: none!important;
-    font-0
 }
 
 .widget.extendednavigation ul.align-left
@@ -522,8 +520,8 @@ hr.line.align-right {
 .widget.extendednavigation ul li.folder .text 
 {
     display:inline-block;
-    padding: 18px 0px;
-    color: @color-swatch4;
+    padding: 18px 20px;
+    color: lighten(@color-swatch4,25%);
 }
 
 .widget.extendednavigation ul li.folder ul li .text 
@@ -593,6 +591,10 @@ hr.line.align-right {
 .widget.extendednavigation.nm-3-tabs ul li:hover ul li, .widget.extendednavigation.nm-4-tabs ul li:hover ul li {
     border-bottom: 1px solid darken(@color-swatch2,5%);
 }
+
+.widget.extendednavigation ul.align-right li.folder {
+    background-position: left center;
+}  
 
 /* Twitter CSS */
 /* 
