@@ -150,7 +150,7 @@ header {
   padding: 0px;
   width: 100%;
   background-color: @color-swatch7;
-  padding: 50px 0 0;
+  padding: 44px 0 0;
 }
 
 header .header-wrap {
@@ -171,7 +171,8 @@ header .profile-spacing {
     margin: 28px 0 0;
 }
 
-header .columns-three-right .widget.profile .bk-profile-socialicons span a {
+header .columns-three-right .widget.profile .bk-profile-socialicons span a,
+footer .columns-three-right .widget.profile .bk-profile-socialicons span a {
     text-align: left;
 }
 
@@ -226,7 +227,7 @@ footer {
 }
 
 footer .profile-spacing {
-    margin: 10px 0 0;
+    margin: 0px 0 0;
 }
 
 footer h1,
@@ -370,6 +371,7 @@ footer h2 {
 .widget.extendednavigation ul li:hover > ul > li {
   display: block;
   width: 100%;
+  text-align: left;
 }
 
 .widget.extendednavigation ul li:hover > ul li a {
@@ -433,6 +435,7 @@ footer h2 {
     color: @font-swatch8-color;
     letter-spacing: @font-swatch8-letter-spacing;
     text-shadow: 2px 2px 0px @color-swatch3, 2px 2px 2px @color-swatch1;
+    text-transform: uppercase;
 }
 
 /* FEATURE STRAPLINE */
@@ -462,6 +465,7 @@ footer h2 {
     text-transform: uppercase;
     box-shadow: 0 0 0 3px rgba(51,51,51,0.1);
     text-shadow: 0 1px 0px rgba(0,0,0,0.1);
+    text-transform: uppercase;
 }
 
 .widget.feature button:hover {
@@ -918,13 +922,11 @@ hr.line.align-right {
 .widget.contactform fieldset label {
     width: 100%;
     float: left;
-    text-transform: uppercase;
     font-family: @font-swatch4-font-family;
     font-size: bkscale(@font-swatch4-font-size, 0.9);
     font-weight: @font-swatch4-font-weight;
     line-height: @font-swatch4-line-height;
     color: @font-swatch4-color;
-    letter-spacing: 1px;
 }
 
 .widget.contactform fieldset input {
@@ -1160,49 +1162,51 @@ hr.line.align-right {
 }
 
 .widget.profile form label {
-    display: block;
-    font-size: bkscale(@font-swatch5-font-size,0.9);
-    font-family: @font-swatch5-font-family;
-    color: lighten(@color-swatch3,30%);
-    line-height: 2em;
+    width: 100%;
+    float: left;
+    font-family: @font-swatch4-font-family;
+    font-size: bkscale(@font-swatch4-font-size, 0.9);
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    color: @font-swatch5-color;
+    letter-spacing: @font-swatch4-letter-spacing;
 }
 
 .widget.profile form input {
-    height: 54px;
+    height: 50px;
     width: 60%;
-    border: 0;
-    background-color: darken(@color-swatch3,5%);
-    cursor: pointer;
+    border: 1px solid darken(@color-swatch2,5%);
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
-    color: @color-swatch5;
-    text-indent: 16px;
+    color: @font-swatch5-color;
+    text-indent: 8px;
     margin-top: 6px;
 }
 
-.widget.profile form input:focus {
+.widget.profile input:focus {
     outline: none
 }
 
 .widget.profile form button {
-    height: 54px;
-    width: 16%;
+    height: 52px;
+    width: 17%;
     margin: 0;
     border: 0;
-    font-family: @font-swatch2-font-family;
-    font-size: 1em;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
     font-weight: @font-swatch7-font-weight;
-    background-color: @color-swatch7;
-    color: @color-swatch1;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    position: relative;
+    top: 1px;
 }
 
 .widget.profile form button:hover {
-    background-color: darken(@color-swatch7,5%);
+    background-color: @font-swatch7-background-color-hover;
     cursor: pointer;
 }
+
 
 /* ===============================
    MAP WIDGET
@@ -1210,8 +1214,7 @@ hr.line.align-right {
 
 .widget.map {
     margin: 0px;
-    padding: 30px;
-    border: 1px solid @color-swatch2;
+    padding: 0;
 }
 
 /* ===============================
@@ -1219,8 +1222,6 @@ hr.line.align-right {
    =============================== */
 
 .widget.signupform {
-    padding: 24px 30px 30px;
-    border: 1px solid @color-swatch2;
 }
 
 .widget.signupform fieldset {
@@ -1243,8 +1244,7 @@ hr.line.align-right {
 .widget.signupform fieldset input {
     height: 50px;
     width: 81%;
-    border: 0;
-    background-color: @color-swatch2;
+    border: 1px solid darken(@color-swatch2,5%);
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
@@ -1377,20 +1377,8 @@ hr.line.align-right {
         padding: 10px 0 0;
     }
 
-    header .column.columns-three-left, header .column.columns-three-right {
+    header .profile-spacing {
         display: none;
-    }
-
-    header .column.columns-three-middle {
-        width: 85%;
-    }
-
-    .widget.companyname {
-        text-align: left;
-    }
-
-    .widget.logo img {
-        margin: 0 0 6px 12px;
     }
 
     /* NAV ICON */
@@ -1413,6 +1401,17 @@ hr.line.align-right {
 
     /* NAV */
 
+    .widget.extendednavigation ul li:first-child {
+        border-top: 1px solid darken(@color-swatch2,5%);
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .widget.extendednavigation ul li:hover > ul li:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
     .widget.extendednavigation {
         width: 100%;
         border-top: 0;
@@ -1420,14 +1419,14 @@ hr.line.align-right {
 
     .widget .extendednavigation ul {
         width: 100%;
-        border-top: 1px solid darken(@color-swatch2,5%);
         display: none;
-        margin: 30px 0px 0px;
-        padding: 20px 0px 0px;
+        margin: 0;
+        padding: 0;
     }
 
     .widget .extendednavigation li {
-        width: 100%
+        width: 100%;
+        text-align: center;
     }
 
     .widget.extendednavigation ul li > ul {
@@ -1445,6 +1444,18 @@ hr.line.align-right {
         padding: 0;
         margin: 0;
         border-top: 1px solid @color-swatch3;
+    }
+
+    .widget.extendednavigation ul li:hover > ul > li {
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .widget.profile span, .widget.profile a {
+        text-align: center;
     }
 
     /* EXTENDED NAVIGATION - INSIDE ZONE */
@@ -1502,6 +1513,10 @@ hr.line.align-right {
         width: 24%;
     }
 
+    .widget.profile form button {
+        width: 27%;
+    }
+
     /* SLIDESHOW */
 
     .widget.responsiveslideshow .slideshow-widget-wrapper {
@@ -1530,30 +1545,56 @@ hr.line.align-right {
     }
 
     header {
-        padding: 20px 0px
+        padding: 20px 0px 10px;
     }
 
     header .header-wrap {
         padding: 0px 0 0;
     }
 
-    /* HEADER */
+    .widget .extendednavigation a.pull:after {
+        top: -50px;
+    }
 
-    .widget.companyname a {
-        font-size: bkscale(@font-swatch10-font-size,0.9);
+    header .columns-three-33-34-33 .columns-three-left, header .columns-three-33-34-33 .columns-three-right {
+        display: none;
+    }
+
+    header .columns-three-33-34-33 .columns-three-middle {
+        margin-bottom: 0;
+    }
+
+    .widget.feature button {
+        margin: 1.5em 0 0;
+    }
+
+    /* UL ALIGN RIGHT */
+
+    .widget.extendednavigation ul.align-right li:hover ul li {
+        text-align: right
+    }
+
+    .widget.extendednavigation ul.align-right li.folder {
+        background-position: 12px center
+    }
+
+    /* UL ALIGN LEFT */
+
+    .widget.extendednavigation ul.align-left li:hover ul li {
+        text-align: left
+    }
+
+    /* UL ALIGN CENTER */
+
+    .widget.extendednavigation ul.align-center li:hover ul li {
+        text-align: center
     }
 
     /* FOOTER */
 
     footer {
         margin-top: 0;
-        padding: 2em 0;
-    }
-
-    footer .columns-three-left, 
-    footer .columns-three-middle {
-        border-bottom: 1px solid @color-swatch2;
-        padding: 0 0 30px;
+        padding: 1em 0;
     }
 
     h2 {
@@ -1578,19 +1619,6 @@ hr.line.align-right {
         padding-bottom: 50%;
     }
 
-    /* SPACING */
-
-    .widget.contactform form , .widget.twitter ul {
-        padding: 20px;
-    }
-
-    .widget.map {
-        padding: 20px;
-    }
-
-    .widget.signupform {
-        padding: 14px 20px 20px;
-    }
 
     /* CLICK TO CALL */
 
