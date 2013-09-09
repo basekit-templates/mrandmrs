@@ -2,6 +2,11 @@
 	"name":"Mr and Mrs",
 	"thumbnail":"mrandmrs.png",
 	"screenshot":"mrandmrs.png",
+    "tags": {
+        "en": ["minimal", "Bright", "Floral", "modern", "colorful", "colourful"],
+        "es": ["minimalista", "Claro", "Decorativo", "moderno", "colorido"],
+        "br": ["minimalista", "Claro", "Florido", "moderno", "colorido"]
+    },
 	"colorSwatches":
     {
         "Swatch 1": {
