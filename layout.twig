@@ -27,7 +27,8 @@
 
 	<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
 
-	<script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
 			$(function() {
 				var pull 		= $('.pull');
 					menu 		= $('.extendednavigation ul');
@@ -49,7 +50,7 @@
 				$(window).bind('resize', menuToggle);
 	            $(window).bind('orientationchange', menuToggle);
 			});
-		</script>
+	</script>
 
 	{% include basekit.headScript %}
 </head>

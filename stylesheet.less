@@ -297,6 +297,10 @@ footer h2 {
     border-top: 2px solid @color-swatch2;
 }
 
+.widget.extendednavigation a.pull {
+  display: none;
+}
+
 .widget.extendednavigation ul {
   padding: 0;
   margin: 0;
@@ -1285,6 +1289,7 @@ hr.line.align-right {
     color: @font-swatch5-color;
     text-indent: 8px;
     margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .widget.signupform fieldset input:focus {
@@ -1451,6 +1456,23 @@ hr.line.align-right {
         display: none;
     }
 
+
+  /* NAV */
+
+
+    .widget.extendednavigation {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .widget .extendednavigation {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
     /* NAV ICON */
 
     .widget .extendednavigation a.pull {
@@ -1483,7 +1505,6 @@ hr.line.align-right {
     }
 
     .widget.extendednavigation {
-        width: 100%;
         border-top: 0;
     }
 
@@ -1514,10 +1535,6 @@ hr.line.align-right {
         padding: 0;
         margin: 0;
         border-top: 1px solid @color-swatch3;
-    }
-
-    .widget.extendednavigation ul li:hover > ul > li {
-        text-align: center;
     }
 
     footer {
