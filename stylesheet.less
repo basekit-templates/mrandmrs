@@ -145,6 +145,7 @@ footer.bk-footer h2 {
 .widget {
     &.extendednavigation {
         border-top: 2px solid @color-swatch2;
+        .clearfix;
         ul {
             width: 100%;
             text-align: center;
@@ -169,7 +170,15 @@ footer.bk-footer h2 {
             }
         }
         a.pull {
-            top: -53px;
+            top: -66px;
+        }
+    }
+}
+
+.bk-pt-default {
+    .widget {
+        &.extendednavigation {
+            border-bottom: 2px solid @color-swatch2;
         }
     }
 }
@@ -291,28 +300,6 @@ footer.bk-footer h2 {
 .widget.feature button:hover {
     background-color: @font-swatch7-background-color-hover;
     cursor: pointer;
-}
-
-
-/* ===============================
-   CLICK TO CALL
-   =============================== */
-
-.widget.clicktocall a {
-    background-image: image('/images/ic-desktop-call.png');
-    background-repeat: no-repeat;
-    padding-left: 26px;
-    margin: 0.5em 0em;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-    text-decoration: none;
-}
-
-.widget.clicktocall a:hover {
 }
 
 /* ===============================
@@ -1015,7 +1002,7 @@ footer.bk-footer h2 {
     }
 
     header.bk-header .header-wrap {
-        padding: 0;
+        padding: 0 0 20px;
     }
 
     header.bk-header .profile-spacing {
@@ -1205,30 +1192,6 @@ footer.bk-footer h2 {
     }
 
 
-    /* CLICK TO CALL */
-
-    .widget.clicktocall {
-        padding: 12px 0px;
-    }
-
-    .widget.clicktocall a {
-        background-image: image('/images/ic-call.svg');
-        background-size: 7px;
-        background-color: @font-swatch7-background-color;
-        background-position: 14px center;
-        background-repeat: no-repeat;
-        padding: 16px 18px 16px 33px;
-        font-family: @font-swatch7-font-family;
-        font-size: @font-swatch7-font-size;
-        font-weight: @font-swatch7-font-weight;
-        line-height: @font-swatch7-line-height;
-        color: @font-swatch7-color;
-        letter-spacing: @font-swatch7-letter-spacing;
-        text-decoration: none;
-    }
-
-    .widget.clicktocall a:hover {
-        background-color: @font-swatch7-background-color-hover;
-    }
+   
 
 }
