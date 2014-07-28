@@ -151,6 +151,7 @@ footer.bk-footer h2 {
             width: 100%;
             @media @tablet {
                 padding-top: 0;
+                 margin-top: 20px;
             }
             li {
                 float: none;
@@ -170,15 +171,14 @@ footer.bk-footer h2 {
             }
         }
         a.pull {
-            top: -66px;
-        }
-    }
-}
-
-.bk-pt-default {
-    .widget {
-        &.extendednavigation {
-            border-bottom: 2px solid @color-swatch2;
+            display: block;
+            margin: 0 auto;
+            left: 0;
+            top: 0;
+            &:after {
+                left: 0;
+                margin: 0 auto;
+            }
         }
     }
 }
