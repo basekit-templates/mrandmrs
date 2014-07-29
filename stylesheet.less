@@ -151,6 +151,7 @@ footer.bk-footer h2 {
             width: 100%;
             @media @tablet {
                 padding-top: 0;
+                 margin-top: 20px;
             }
             li {
                 float: none;
@@ -170,15 +171,14 @@ footer.bk-footer h2 {
             }
         }
         a.pull {
-            top: -66px;
-        }
-    }
-}
-
-.bk-pt-default {
-    .widget {
-        &.extendednavigation {
-            border-bottom: 2px solid @color-swatch2;
+            display: block;
+            margin: 0 auto;
+            left: 0;
+            top: 0;
+            &:after {
+                left: 0;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -200,12 +200,12 @@ footer.bk-footer h2 {
   
 }
 
-.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder:hover {
+.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.selected a, .widget.extendednavigation ul li.folder:hover {
   background-color: @font-swatch6-background-color-hover;
   text-decoration: none;
 }
 
-.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
+.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.selected a, .widget.extendednavigation ul li.folder .text:hover {
   color: @font-swatch6-color-hover;
 }
 
@@ -988,6 +988,20 @@ footer.bk-footer h2 {
 
 @media only screen and (max-width: 768px) { 
 
+    .bk-header {
+        .responsivecolumns .columns-three-middle, .columns-three-33-34-33 .columns-three-middle {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .responsivecolumns .columns-three-left, .columns-three-33-34-33 .columns-three-left {
+            display: none;
+        }
+
+        .responsivecolumns .columns-three-right, .columns-three-33-34-33 .columns-three-right {
+            display: none;
+        }
+    }
     .canvas {
         margin: 30px auto;
     }
@@ -1007,6 +1021,10 @@ footer.bk-footer h2 {
 
   /* NAV */
 
+  .widget.extendednavigation .bk-overlay {
+    left: 0!important;
+    margin: 0 auto;
+  }
 
     .widget.extendednavigation {
     max-width: 100%;
@@ -1018,6 +1036,7 @@ footer.bk-footer h2 {
   .widget .extendednavigation {
     display: block;
     float: left;
+    padding: 14px 0;
     width: 100%;
   }
 
@@ -1066,7 +1085,7 @@ footer.bk-footer h2 {
     /* OTHER */
 
     .main {
-        padding: 50px 0
+        padding: 30px 0
     }
 
     section.page {
@@ -1084,7 +1103,8 @@ footer.bk-footer h2 {
     }
 
     .widget.feature .feature-bgimg .content {
-        height: 350px
+        height: 350px;
+        padding: 20px;
     }
 
     .widget.feature h2 {
@@ -1097,9 +1117,13 @@ footer.bk-footer h2 {
         line-height: bkscale(@font-swatch9-line-height,0.8);
     }
 
-    .widget.feature .feature-btn button {
-        font-size: .8em;
-        padding: 10px;
+    .widget.feature .feature-bgimg .content button {
+        font-size: @font-swatch7-font-size;
+        padding: 12px 18px;
+        margin-top: 10px;
+        span {
+            vertical-align: inherit;
+        }
     }
 
     /* SIGNUP FORM */

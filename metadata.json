@@ -3,6 +3,7 @@
 	"thumbnail":"mrandmrs.png",
 	"screenshot":"mrandmrs.png",
 	"templateType":"standard",
+    "pageTypes": ["home"],
     "tags": {
         "en": ["minimal", "Bright", "Floral", "modern", "colorful", "colourful", "stylish", "agency", "magazine", "creative", "elegant", "professional", "sophisticated", "wedding", "sans-serif"],
         "es": ["minimalista", "Claro", "Decorativo", "moderno", "colorido", "estilo", "agencia", "revista", "creativo", "elegante", "profesional", "sofisticado", "boda", "sans-serif"],
