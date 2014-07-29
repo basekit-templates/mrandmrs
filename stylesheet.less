@@ -337,52 +337,80 @@ footer.bk-footer h2 {
    =============================== */
 
 .widget.twitter {
-    margin-bottom: 20px;
-}
-
-.widget.twitter a {
+  margin: 20px 0;
+  img {
+    border-radius: 50%;
+  }
+  p {
     color: @color-swatch4;
-    font-size: @font-swatch5-font-size;
-    text-decoration: none;
-}
-
-.widget.twitter a:hover {
-    border-bottom: 1px solid @color-swatch3
-}
-
-.widget.twitter ul {
     padding: 0;
-    margin: 0;
-}
-
-.widget.twitter ul li {
-    border-bottom: none;
-    list-style: none;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    padding: 30px 0;
-    border-bottom: 1px solid darken(@color-swatch2,2%);
-}
-
-.widget.twitter ul li:last-child {
-    border-bottom: 0
-}
-
-.widget.twitter .twitter-content span.bk-full-name {
-    font-family: @font-swatch4-font-family;
-    font-size: 14px;
-    font-weight: 400!important;
-    color: @color-swatch3;
-    font-weight: bold;
-}
-
-.widget.twitter a,
-.widget.twitter time.created_at,
-.widget.twitter span {
-    color: @font-swatch5-color;
-    font-size: 11px;
+  } 
+  li {
+    border-bottom: darken(@color-swatch1,10%);
+  }
+  ul li a:hover {
     text-decoration: none;
+  }
+  li:last-child {
+    padding-bottom: 0;
+  }
+  // Tweet Content
+  .twitter-profile-pic {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 12%;
+    margin-right: 1%;
+    @media @tablet {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .twitter-content {
+    float: none;
+    display: inline-block;
+    width: 85%;
+    span.bk-full-name {
+      color: @font-swatch4-color;
+      font-family: @font-swatch4-font-family;
+      font-size: @font-swatch4-font-size;
+      line-height: @font-swatch4-line-height;
+    }
+    // Tweet Link
+    p a {
+      color: @color-swatch5;
+      text-decoration: none;
+    }
+    a:hover span.bk-full-name {
+        color: @font-swatch4-color;
+    }
+    span a {
+      text-decoration: none;
+      &:hover {
+        color: @color-swatch2;
+        text-decoration: none;
+      }
+    }
+    p {
+      color: @color-swatch5;
+      margin-top: 4px;
+      &:last-child {
+        font-weight: inherit;
+      }
+    }
+    // Extra Info
+    time {
+      display: none;
+    }
+    span, span a, p:last-child {
+      font-size: 13px;
+      color: @color-swatch3;
+      font-weight: inherit;
+      &:hover {
+        color: darken(@color-swatch3, 15%);
+      }
+    }
+  }
 }
 
 /* ===============================
@@ -438,11 +466,10 @@ footer.bk-footer h2 {
 }
 
 .widget.contactform fieldset button.btn {
-    padding: 8px 14px;
+    padding: 12px 14px;
     margin: 0;
     border: 0;
     font-family: @font-swatch7-font-family;
-    font-size: .8em;
     background-color: @font-swatch7-background-color;
     font-weight: @font-swatch7-font-weight;
     line-height: @font-swatch7-line-height;
@@ -484,60 +511,23 @@ footer.bk-footer h2 {
     color: @font-swatch7-color;
     text-decoration: none;
     text-shadow: 0 1px 0px rgba(0,0,0,0.1);
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+        cursor: pointer;
+    }
 }
 
 .widget.tweet a {
     background-image: image('/images/social/socialicons-twitter.png');
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+        cursor: pointer;
+    }
 }
 
 .widget.tweet a:hover,
 .tweet a:active {
     cursor: pointer;
-}
-
-/* ==================================
-   SOCIAL BAR WIDGET / SOCIAL PROFILE
-   =============================== */
-
-.widget.socialicons,
-.widget.profile .bk-profile-socialicons {
-    padding: 0px;
-    font-size: 1em;
-    font-family: @font-swatch7-font-family;
-}
-
-.widget.socialicons a,
-.widget.profile .bk-profile-socialicons a {
-    text-decoration: none;
-    text-indent: -9999px;
-    white-space: nowrap;
-}
-
-.widget.profile .bk-profile-socialicons span {
-    display: inline-block
-}
-
-.widget.socialicons span a,
-.widget.profile .bk-profile-socialicons span a {
-    display: inline-block;
-    margin-right: 6px;
-    margin-bottom: 8px;
-    background-size: 14px;
-    width: 22px;
-    height: 22px;
-    background-color: @font-swatch7-background-color;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.widget.profile .bk-profile-socialicons span a {
-    background-color: @font-swatch7-background-color
-}
-
-.widget.socialicons span a:hover,
-.widget.profile 
-.bk-profile-socialicons span a:hover {
-    background-color: @font-swatch7-background-color-hover
 }
 
 /* ===============================
@@ -814,38 +804,47 @@ footer.bk-footer h2 {
         .blog-post-item {
             margin: 0 0 30px;
         }
-        .blog-post-feature-image-wrap {  /* Blog post feature image */
-            background-size: cover;
-            max-width: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 250px;
-            width: 250px;
-            margin-bottom: 20px;
-            img {
-                display: none;
-            }
+    }
+}
+
+.blogpost, .blog-post-list {
+    .blog-post-feature-image-wrap {
+        line-height: 0;
+        background-size: contain;
+        background-position: left;
+        margin: 20px 0 25px;
+        width: auto;
+        img {
+            display: none;
         }
     }
 }
 
-.blog-post-item {
-    margin: 1.5em 0;
-    padding-bottom: 1em;
-    h2 {
-        a {
-            font-family: @font-swatch2-font-family;
-            font-size: @font-swatch2-font-size;
-            font-weight: @font-swatch2-font-weight;
-            line-height: @font-swatch2-line-height;
-            color: @font-swatch2-color;
-            letter-spacing: @font-swatch2-letter-spacing;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
+.blogpost, .blog-post-list {
+    .blog-post-feature-image-wrap {
+        line-height: 0;
+        background-size: contain;
+        background-position: left;
+        margin: 20px 0 25px;
+        width: auto;
+        img {
+            display: none;
         }
     }
+    h1 {
+      font-family: @font-swatch2-font-family;
+      font-size: @font-swatch2-font-size;
+      line-height: @font-swatch2-line-height;
+      padding-bottom: 18px;
+    }
+}
+
+.blog-post-list .blog-post-feature-image-wrap {
+    height: 275px;
+}
+
+.blogpost .blog-post-feature-image-wrap {
+    height: 350px;
 }
 
 .blog-post-metadata {
