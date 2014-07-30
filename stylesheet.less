@@ -259,7 +259,8 @@ footer.bk-footer h2 {
     height: 600px;
 }
 
-.widget.feature .content {
+.widget.feature .content button.btn {
+  height: auto;
 }
 
 /* FEATURE TITLE */
@@ -456,7 +457,7 @@ footer.bk-footer h2 {
 .form-group.productlist-search {
   position: relative;
   input[type=search] {
-    padding-right: 90px;
+    padding-right: 85px;
     box-sizing: border-box;
   }
   button {
@@ -509,7 +510,7 @@ select {
   -ms-transition: border .2s;
   transition: border .2s;
   border-radius: 0;
-  height: 40px;
+  height: 45px;
 }
 
 .productlist-item-count {
@@ -544,6 +545,17 @@ select {
       width: 100%;
     }
   }
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
+  text-align: left;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-go-to-checkout-btn {
+  margin: 10px 0;
+  display: inline-block;
+  padding: 0 12px;
+  font-weight: 600;
 }
 
 
@@ -670,7 +682,7 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
     .transition(all, 0.5s, ease);
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, button {
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, .widget.ecomproduct .ecom-product .ecom-product-go-to-checkout-btn, button {
     line-height: 45px;
     height: 45px;
 }
