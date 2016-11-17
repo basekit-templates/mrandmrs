@@ -18,7 +18,7 @@ body {
     margin: 0 5%;
 }
 
-@media only screen and (min-width: 1140px) { 
+@media only screen and (min-width: 1140px) {
     .wrapper {
         width: 90%;
         /* 1140px - 10% for margins */
@@ -49,10 +49,10 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-    -webkit-transition: @prop @time @ease;  
+    -webkit-transition: @prop @time @ease;
     -moz-transition:    @prop @time @ease;
-    -ms-transition:     @prop @time @ease; 
-    -o-transition:      @prop @time @ease;  
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
     transition:         @prop @time @ease;
 }
 
@@ -205,7 +205,7 @@ footer.bk-footer h2 {
   color: @font-swatch6-color;
   line-height:@font-swatch6-line-height;
   letter-spacing: @font-swatch6-letter-spacing;
-  
+
 }
 
 .widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.selected a, .widget.extendednavigation ul li.folder:hover {
@@ -273,7 +273,7 @@ footer.bk-footer h2 {
     color: @font-swatch8-color;
     letter-spacing: @font-swatch8-letter-spacing;
     text-shadow: 2px 2px 0px @color-swatch3, 2px 2px 2px @color-swatch1;
-    
+
 }
 
 /* FEATURE STRAPLINE */
@@ -300,10 +300,10 @@ footer.bk-footer h2 {
     color: @font-swatch7-color;
     letter-spacing: @font-swatch7-letter-spacing;
     text-decoration: none;
-    
+
     box-shadow: 0 0 0 3px rgba(51,51,51,0.1);
     text-shadow: 0 1px 0px rgba(0,0,0,0.1);
-    
+
 }
 
 .widget.feature button:hover {
@@ -332,7 +332,7 @@ footer.bk-footer h2 {
     color: @font-swatch7-color;
     text-decoration: none;
     text-shadow: 0 1px 0px rgba(0,0,0,0.1);
-    
+
 }
 
 .widget.button button:hover {
@@ -353,7 +353,7 @@ footer.bk-footer h2 {
   p {
     color: @color-swatch4;
     padding: 0;
-  } 
+  }
   li {
     border-bottom: darken(@color-swatch1,10%);
   }
@@ -439,7 +439,7 @@ footer.bk-footer h2 {
         label {
             display: block;
             padding-bottom: .4em;
-        }  
+        }
         select {
             width: auto;
             @media @tablet {
@@ -459,7 +459,7 @@ footer.bk-footer h2 {
 
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
     padding: 10px 5px 10px 0;
-    margin: 0 5px 0 0; 
+    margin: 0 5px 0 0;
 }
 
 .productlist-display-form .form-group {
@@ -532,7 +532,7 @@ select {
     width: 100%;
     padding: 0;
 
-  } 
+  }
   .form-group.productlist-search button {
     margin-left: -4px;
     width: 25%;
@@ -570,7 +570,7 @@ select {
     color: @color-swatch4;
     margin-bottom: 20px;
     margin-top: 10px;
-    tr:first-child { 
+    tr:first-child {
       @media @mobile {
           display: table-header-group;
           th:nth-child(2) {
@@ -738,7 +738,7 @@ input, textarea {
     background-color: @color-swatch7;
     border: 1px solid lighten(@color-swatch5, 12%);
     -webkit-appearance: none;
-    -webkit-border-radius:0; 
+    -webkit-border-radius:0;
     border-radius:0;
     padding: 12px;
     @media @mobile {
@@ -799,7 +799,8 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
 }
 
 .widget {
-    &.contactform {
+    &.contactform,
+    .advancedcontactform {
         label {
             font-family: @font-swatch3-font-family;
             font-size: @font-swatch3-font-size;
@@ -995,7 +996,7 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
         .btn-next {
             background-image: image('/images/slideshow-arrow-right.png');
             background-repeat: no-repeat;
-            background-position: center;    
+            background-position: center;
         }
         /* Play Button */
         .btn-play {
@@ -1204,7 +1205,7 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
    IPAD WIDTH
    =============================== */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
 
     .bk-header {
         .responsivecolumns .columns-three-middle, .columns-three-33-34-33 .columns-three-middle {
@@ -1350,7 +1351,7 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
    IPHONE WIDTH
    =============================== */
 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
 
     body {
         margin: 0;
