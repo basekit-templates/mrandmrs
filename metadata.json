@@ -1,5 +1,6 @@
 {
 	"name":"Mr and Mrs",
+	"versionTenCompatible": 1,
 	"thumbnail":"mrandmrs.png",
 	"screenshot":"mrandmrs-screenshot.jpg",
 	"templateType":"standard",
